@@ -1,0 +1,30 @@
+{
+  "name": "medical-app",
+  "version": "1.0.0",
+  "description": "Medical application",
+  "license": "ISC",
+  "author": "Brayan Yin Lin",
+  "type": "commonjs",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "prepare": "husky & echo pnpm lint-staged > .husky/pre-commit",
+    "dev": "pnpm --filter client run build & pnpm --filter api run dev",
+    "build": "pnpm -r build"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "lint-staged": {
+    "apps/api/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter apps/api eslint --config apps/api/eslint.config.mjs --fix"
+    ],
+    "apps/client/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter apps/client eslint --config apps/client/eslint.config.mjs --fix"
+    ]
+  }
+}
