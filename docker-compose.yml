@@ -1,6 +1,7 @@
 services:
-  db:
+  db_easy_class_db:
     image: postgres:latest
+    container_name: name
     environment:
       POSTGRES_USER: ${PGUSER}
       POSTGRES_PASSWORD: ${PGPASSWORD}
@@ -9,10 +10,6 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-  cache:
-    image: redis:latest
-    ports:
-      - "6379:6379"
 
 volumes:
   pgdata:

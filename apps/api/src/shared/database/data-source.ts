@@ -7,6 +7,12 @@ import {
   env_port_db,
   env_user_db
 } from '@shared/config/environment'
+import { User } from '@users/entities/user.entity'
+import { Role } from '@roles/entities/role.entity'
+import { Permission } from '@permissions/entities/permission.entity'
+import { Enrollment } from '@root/components/enrollment/entities/enrollment.entity'
+import { Classroom } from '@root/components/classrooms/entities/classroom.entity'
+import { Period } from '@root/components/periods/entities/period.entity'
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -17,7 +23,7 @@ export const AppDataSource = new DataSource({
   database: env_db,
   synchronize: true,
   logging: false,
-  entities: [],
+  entities: [User, Role, Permission, Enrollment, Classroom, Period],
   migrations: [],
   subscribers: []
 })

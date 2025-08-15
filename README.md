@@ -1,4 +1,4 @@
-# Medical App
+# Accademic App
 
 ## Table of Contents
 - [Description](#description)
@@ -12,20 +12,20 @@
 - [License](#license)
 
 ## Description
-This is a medical application built as a monorepo. It consists of a client-side application and a server-side API.
+This is a accademic app built as a monorepo. It consists of a client-side application and a server-side API.
 
 ## Features
 - **Client-side application:** Built with React, Vite, and TypeScript.
 - **Server-side API:** Built with Express, TypeORM, and TypeScript.
-- **Monorepo:** Managed with npm workspaces and Turbo.
+- **Monorepo:** Managed with pnpm.
 - **Linting and formatting:** Enforced with ESLint and Prettier.
 - **Testing:** Set up with Playwright for end-to-end testing and Vitest for unit testing.
 
 ## Getting Started
 To get started with this project, follow these steps:
 1. Clone the repository.
-2. Install the dependencies using `npm install`.
-3. Run the development server using `npm run dev`.
+2. Install the dependencies using `pnpm install`.
+3. Run the development server using `pnpm dev`.
 
 ## Project Structure
 The project is organized as a monorepo with the following structure:

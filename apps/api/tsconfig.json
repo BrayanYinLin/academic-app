@@ -32,6 +32,9 @@
     "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     "paths": {
       "@shared/*": ["./src/shared/*"],
+      "@roles/*": ["./src/components/roles/*"],
+      "@permissions/*": ["./src/components/permissions/*"],
+      "@users/*": ["./src/components/users/*"],
       "@root/*": ["./src/*"]
     },  
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -113,5 +116,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "exclude": ["eslint.config.mts"]
+  "exclude": ["eslint.config.mts", "vitest.config.ts"]
 }
